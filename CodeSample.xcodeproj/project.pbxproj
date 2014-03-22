@@ -19,6 +19,13 @@
 		E172021E18DD0A9300D4241D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E172020618DD0A9200D4241D /* UIKit.framework */; };
 		E172022618DD0A9300D4241D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E172022418DD0A9300D4241D /* InfoPlist.strings */; };
 		E172022818DD0A9300D4241D /* CodeSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E172022718DD0A9300D4241D /* CodeSampleTests.m */; };
+		E172023518DD134600D4241D /* com.karpodinis.resources.LandingViewDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = E172023418DD134600D4241D /* com.karpodinis.resources.LandingViewDataSource.plist */; };
+		E172023918DD140100D4241D /* LandingViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E172023818DD140100D4241D /* LandingViewTableViewController.m */; };
+		E172023C18DD155300D4241D /* LandingViewTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E172023B18DD155300D4241D /* LandingViewTableViewControllerDataSource.m */; };
+		E172024318DD251100D4241D /* FibonacciLandingViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E172024218DD251100D4241D /* FibonacciLandingViewTableViewCell.m */; };
+		E172024B18DD329200D4241D /* LandingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E172024A18DD329200D4241D /* LandingViewCell.m */; };
+		E172024F18DD364000D4241D /* LandingViewConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E172024E18DD364000D4241D /* LandingViewConfiguration.m */; };
+		E172025218DD375400D4241D /* UnusableLandingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E172025118DD375400D4241D /* UnusableLandingViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E17201FF18DD0A9200D4241D /* CodeSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17201FF18DD0A9200D4241D /* AKCodeSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKCodeSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E172020218DD0A9200D4241D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E172020418DD0A9200D4241D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E172020618DD0A9200D4241D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -48,6 +55,19 @@
 		E172022318DD0A9300D4241D /* CodeSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeSampleTests-Info.plist"; sourceTree = "<group>"; };
 		E172022518DD0A9300D4241D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E172022718DD0A9300D4241D /* CodeSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeSampleTests.m; sourceTree = "<group>"; };
+		E172023418DD134600D4241D /* com.karpodinis.resources.LandingViewDataSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = com.karpodinis.resources.LandingViewDataSource.plist; path = Support/com.karpodinis.resources.LandingViewDataSource.plist; sourceTree = "<group>"; };
+		E172023718DD140100D4241D /* LandingViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewTableViewController.h; path = "Core/Landing View/LandingViewTableViewController.h"; sourceTree = "<group>"; };
+		E172023818DD140100D4241D /* LandingViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewTableViewController.m; path = "Core/Landing View/LandingViewTableViewController.m"; sourceTree = "<group>"; };
+		E172023A18DD155300D4241D /* LandingViewTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewTableViewControllerDataSource.h; path = "Core/Landing View/LandingViewTableViewControllerDataSource.h"; sourceTree = "<group>"; };
+		E172023B18DD155300D4241D /* LandingViewTableViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewTableViewControllerDataSource.m; path = "Core/Landing View/LandingViewTableViewControllerDataSource.m"; sourceTree = "<group>"; };
+		E172024118DD251100D4241D /* FibonacciLandingViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciLandingViewTableViewCell.h; path = Fibonacci/FibonacciLandingViewTableViewCell.h; sourceTree = "<group>"; };
+		E172024218DD251100D4241D /* FibonacciLandingViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FibonacciLandingViewTableViewCell.m; path = Fibonacci/FibonacciLandingViewTableViewCell.m; sourceTree = "<group>"; };
+		E172024918DD329200D4241D /* LandingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewCell.h; path = Core/Supers/LandingViewCell.h; sourceTree = "<group>"; };
+		E172024A18DD329200D4241D /* LandingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewCell.m; path = Core/Supers/LandingViewCell.m; sourceTree = "<group>"; };
+		E172024D18DD364000D4241D /* LandingViewConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewConfiguration.h; path = "Core/Landing View/LandingViewConfiguration.h"; sourceTree = "<group>"; };
+		E172024E18DD364000D4241D /* LandingViewConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewConfiguration.m; path = "Core/Landing View/LandingViewConfiguration.m"; sourceTree = "<group>"; };
+		E172025018DD375400D4241D /* UnusableLandingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnusableLandingViewCell.h; path = "Core/Landing View/UnusableLandingViewCell.h"; sourceTree = "<group>"; };
+		E172025118DD375400D4241D /* UnusableLandingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnusableLandingViewCell.m; path = "Core/Landing View/UnusableLandingViewCell.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +107,7 @@
 		E172020018DD0A9200D4241D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E17201FF18DD0A9200D4241D /* CodeSample.app */,
+				E17201FF18DD0A9200D4241D /* AKCodeSample.app */,
 				E172021A18DD0A9200D4241D /* CodeSampleTests.xctest */,
 			);
 			name = Products;
@@ -107,9 +127,9 @@
 		E172020818DD0A9200D4241D /* CodeSample */ = {
 			isa = PBXGroup;
 			children = (
-				E172021118DD0A9200D4241D /* AppDelegate.h */,
-				E172021218DD0A9200D4241D /* AppDelegate.m */,
-				E172021418DD0A9200D4241D /* Images.xcassets */,
+				E172023318DD126D00D4241D /* Support */,
+				E172023218DD11CD00D4241D /* Categories */,
+				E172023118DD11BE00D4241D /* Core */,
 				E172020918DD0A9200D4241D /* Supporting Files */,
 			);
 			path = CodeSample;
@@ -118,6 +138,7 @@
 		E172020918DD0A9200D4241D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E172021418DD0A9200D4241D /* Images.xcassets */,
 				E172020A18DD0A9200D4241D /* CodeSample-Info.plist */,
 				E172020B18DD0A9200D4241D /* InfoPlist.strings */,
 				E172020E18DD0A9200D4241D /* main.m */,
@@ -144,6 +165,66 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E172023118DD11BE00D4241D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E172024818DD326900D4241D /* Supers */,
+				E172024018DD24EF00D4241D /* Fibonacci */,
+				E172023618DD13CA00D4241D /* Landing View */,
+				E172021118DD0A9200D4241D /* AppDelegate.h */,
+				E172021218DD0A9200D4241D /* AppDelegate.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E172023218DD11CD00D4241D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		E172023318DD126D00D4241D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E172023418DD134600D4241D /* com.karpodinis.resources.LandingViewDataSource.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		E172023618DD13CA00D4241D /* Landing View */ = {
+			isa = PBXGroup;
+			children = (
+				E172023718DD140100D4241D /* LandingViewTableViewController.h */,
+				E172023818DD140100D4241D /* LandingViewTableViewController.m */,
+				E172023A18DD155300D4241D /* LandingViewTableViewControllerDataSource.h */,
+				E172023B18DD155300D4241D /* LandingViewTableViewControllerDataSource.m */,
+				E172024D18DD364000D4241D /* LandingViewConfiguration.h */,
+				E172024E18DD364000D4241D /* LandingViewConfiguration.m */,
+				E172025018DD375400D4241D /* UnusableLandingViewCell.h */,
+				E172025118DD375400D4241D /* UnusableLandingViewCell.m */,
+			);
+			name = "Landing View";
+			sourceTree = "<group>";
+		};
+		E172024018DD24EF00D4241D /* Fibonacci */ = {
+			isa = PBXGroup;
+			children = (
+				E172024118DD251100D4241D /* FibonacciLandingViewTableViewCell.h */,
+				E172024218DD251100D4241D /* FibonacciLandingViewTableViewCell.m */,
+			);
+			name = Fibonacci;
+			sourceTree = "<group>";
+		};
+		E172024818DD326900D4241D /* Supers */ = {
+			isa = PBXGroup;
+			children = (
+				E172024918DD329200D4241D /* LandingViewCell.h */,
+				E172024A18DD329200D4241D /* LandingViewCell.m */,
+			);
+			name = Supers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,7 +242,7 @@
 			);
 			name = CodeSample;
 			productName = CodeSample;
-			productReference = E17201FF18DD0A9200D4241D /* CodeSample.app */;
+			productReference = E17201FF18DD0A9200D4241D /* AKCodeSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E172021918DD0A9200D4241D /* CodeSampleTests */ = {
@@ -221,6 +302,7 @@
 			files = (
 				E172020D18DD0A9200D4241D /* InfoPlist.strings in Resources */,
 				E172021518DD0A9200D4241D /* Images.xcassets in Resources */,
+				E172023518DD134600D4241D /* com.karpodinis.resources.LandingViewDataSource.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E172024F18DD364000D4241D /* LandingViewConfiguration.m in Sources */,
+				E172024B18DD329200D4241D /* LandingViewCell.m in Sources */,
+				E172024318DD251100D4241D /* FibonacciLandingViewTableViewCell.m in Sources */,
+				E172025218DD375400D4241D /* UnusableLandingViewCell.m in Sources */,
 				E172021318DD0A9200D4241D /* AppDelegate.m in Sources */,
+				E172023918DD140100D4241D /* LandingViewTableViewController.m in Sources */,
 				E172020F18DD0A9200D4241D /* main.m in Sources */,
+				E172023C18DD155300D4241D /* LandingViewTableViewControllerDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +452,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeSample/CodeSample-Prefix.pch";
 				INFOPLIST_FILE = "CodeSample/CodeSample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AKCodeSample;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -377,7 +465,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeSample/CodeSample-Prefix.pch";
 				INFOPLIST_FILE = "CodeSample/CodeSample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AKCodeSample;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
