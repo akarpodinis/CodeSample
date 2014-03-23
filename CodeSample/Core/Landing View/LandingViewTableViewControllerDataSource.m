@@ -19,6 +19,7 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
 @property (nonatomic, readwrite, strong) NSArray *registerableTableViewCellClassNames;
 
 - (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties;
+- (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass;
 
 @end
 
@@ -107,42 +108,31 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
 
 - (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties {
     
-    if (!properties[kTableViewCellTextNameKey]) {
-        NSLog(@"Missing cell text key (%@)", kTableViewCellTextNameKey);
+    BOOL isTargetClassValid = [self testClassNameForExistense:properties[kTableViewTargetViewControllerClassNameKey]
+                                               kindOfSubclass:[UIViewController class]];
+    
+    BOOL isLoadableLandingCellClassValid = [self testClassNameForExistense:properties[kTableViewCellClassNameKey]
+                                                            kindOfSubclass:[UITableViewCell class]];
+    
+    BOOL hasCellText = properties[kTableViewCellTextNameKey] != nil;
+    
+    return isTargetClassValid && isLoadableLandingCellClassValid && hasCellText;
+}
+
+- (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass {
+    
+    Class loadableClass = NSClassFromString(className);
+    
+    if (!className) {
+        NSLog(@"Class name not specified");
         return NO;
-    } else if (!properties[kTableViewCellClassNameKey]) {
-        NSLog(@"Missing cell class name (%@)", kTableViewCellClassNameKey);
+    } else if (!loadableClass) {
+        NSLog(@"Class not loadable (%@)", className);
         return NO;
-    } else if (!properties[kTableViewTargetViewControllerClassNameKey]) {
-        NSLog(@"Missing target view controller name (%@)", kTableViewTargetViewControllerClassNameKey);
+    } else if (![loadableClass isSubclassOfClass:subclass]) {
+        NSLog(@"Loaded class (%@) not a subclass of %@", className, NSStringFromClass(subclass));
         return NO;
-    } else {    // Raw data is good, let's validate based on the loadability of the data itself
-        NSString *targetableClassname = properties[kTableViewTargetViewControllerClassNameKey];
-        Class loadableTargetClass = NSClassFromString(targetableClassname);
-        
-        if (!loadableTargetClass) {
-            NSLog(@"Targetable class specified not found (%@)", targetableClassname);
-            return NO;
-        }
-        
-        if (![loadableTargetClass isSubclassOfClass:[UIViewController class]]) {
-            NSLog(@"Targetable class specified not a subclass of UIViewController (%@)", targetableClassname);
-            return NO;
-        }
-        
-        NSString *tableViewCellClassName = properties[kTableViewTargetViewControllerClassNameKey];
-        Class loadableTableViewCellClass = NSClassFromString(tableViewCellClassName);
-        
-        if (!loadableTableViewCellClass) {
-            NSLog(@"Table view cell class specified not found (%@)", tableViewCellClassName);
-            return NO;
-        }
-        
-        if (![loadableTableViewCellClass isSubclassOfClass:[UITableViewCell class]]) {
-            NSLog(@"Table view cell class specified not a subclass of UITableViewCell (%@)", tableViewCellClassName);
-            return NO;
-        }
-        
+    } else {
         return YES;
     }
 }

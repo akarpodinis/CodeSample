@@ -11,4 +11,5 @@
 NSString *const kTableViewCellTextNameKey = @"TableViewCellTextNameKey";
 NSString *const kTableViewTargetViewControllerClassNameKey = @"TableViewTargetViewControllerClassNameKey";
 NSString *const kTableViewCellClassNameKey = @"TableViewCellClassNameKey";
+
 NSString *const kTableViewCellUnusableCellClassName = @"UnusableLandingViewCell";

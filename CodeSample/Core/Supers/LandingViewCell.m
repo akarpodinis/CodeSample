@@ -8,11 +8,31 @@
 
 #import "LandingViewCell.h"
 
+NSTimeInterval const kLandingViewCellTotalAnimationTime = 0.75f;
+
 @implementation LandingViewCell
 
 - (void) applyConfiguration:(NSDictionary *)configuration {
     
     self.textLabel.text = configuration[kTableViewCellTextNameKey];
+}
+
+- (BOOL) prepareForAnimation {
+    
+    return NO;
+}
+
+- (void) animateIn {
+    
+}
+
+- (void) layoutSubviews {
+    
+    [super layoutSubviews];
+    
+    if ([self prepareForAnimation]) {
+        [self animateIn];
+    }
 }
 
 @end

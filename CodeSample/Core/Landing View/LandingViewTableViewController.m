@@ -7,6 +7,7 @@
 //
 
 #import "LandingViewTableViewController.h"
+#import "LandingViewCell.h"
 #import "LandingViewTableViewControllerDataSource.h"
 
 @interface LandingViewTableViewController () <UITableViewDelegate>
@@ -17,7 +18,7 @@
 
 @implementation LandingViewTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style {
+- (id) initWithStyle:(UITableViewStyle)style {
     
     if (self = [super initWithStyle:style]) {
         
@@ -35,7 +36,9 @@
     return self;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+#pragma mark - UITableViewDelegate implementation
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -50,5 +53,7 @@
     
     [self.navigationController pushViewController:viewController animated:YES];
 }
+
+#pragma mark - Custom transition
 
 @end
