@@ -10,6 +10,7 @@
 #import "BloomSourceDataSource.h"
 #import "CodeSampleStatusTracking.h"
 #import "BloomSourceCell.h"
+#import "BloomCruncherViewController.h"
 
 NSString *const kBloomSourceShouldSkipSummaryKey = @"kBloomSourceShouldSkipSummaryKey";
 NSString *const kBloomSourceSummaryFilename = @"About_Bloom";
@@ -78,14 +79,10 @@ NSString *const kBloomSourceSummaryFileExtension = @"txt";
             [[NSUserDefaults standardUserDefaults] synchronize];
         }];
         
-        [alert setCompletion:^(UIAlertView *alertView) {
-//            [self.fibonacciDataSource startCalculation];
-        }];
-        
         [alert show];
-    } else {
-//        [self.fibonacciDataSource startCalculation];
     }
+    
+    self.navigationController.navigationBar.translucent = YES;
 }
 
 #pragma mark - CodeSampleStatusTracking implementation
@@ -124,7 +121,12 @@ NSString *const kBloomSourceSummaryFileExtension = @"txt";
         return;
     }
     
+    BloomCruncherViewController *cruncher = [[BloomCruncherViewController alloc] initWithSourceURLString:self.bloomSourceDataSource.sourcesLoadedFromDisk[indexPath.row][kBloomSourceDataSourceURLKey]];
     
+    cruncher.navigationItem.title = @"Bloom creation";
+    
+    [self.navigationController pushViewController:cruncher animated:YES];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 @end
