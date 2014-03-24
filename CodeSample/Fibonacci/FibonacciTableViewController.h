@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CodeSampleStatusTracking.h"
 
-@interface FibonacciTableViewController : UITableViewController
+@interface FibonacciTableViewController : UITableViewController <CodeSampleStatusTracking>
 
 @end

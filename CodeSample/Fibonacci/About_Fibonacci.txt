@@ -1,0 +1,9 @@
+The Fibonacci Sequence
+
+In an effort to display a variety of iOS programming techniques, I'm going to attempt to calculate the Fibonacci sequence as high as possible (bounded by MAX_INT, which is Fibonacci(2,147,483,647)) while maintaining a high framerate for scrolling in the underlying UITableView.
+
+Of note particularly is the separation of the calculation of any Fibonacci(n) from the thread drawing the UI.  Computational overhead becomes overbearing somewhere around Fibonacci(42), and maintaining the highest framerate possible while also continuing to crunch and display data is important.
+
+Additionally, the worker operation that contains the Fibonacci calculation observes the important aspects of subclassing NSOperation; namely, implementing -cancel effectively and sending progress updates while calculating.
+
+Finally, the implementation of the Fibonacci calculation is succint and elegant, demonstrating proper use of recursion.

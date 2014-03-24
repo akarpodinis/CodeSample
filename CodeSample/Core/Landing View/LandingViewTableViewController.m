@@ -54,6 +54,13 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 #pragma mark - Custom transition
 
 @end

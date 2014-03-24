@@ -7,13 +7,20 @@
 //
 
 #import "FibonacciLandingViewTableViewCell.h"
+#import "CodeSampleStatusTracking.h"
+
+@interface FibonacciLandingViewTableViewCell ()
+
+@property (nonatomic, assign) CGPoint detailTextLabelOriginalCenter;
+
+@end
 
 @implementation FibonacciLandingViewTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 
-    if ( self = [super initWithStyle:style reuseIdentifier:reuseIdentifier] ) {
-        // Initialization code
+    if ( self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier] ) {
+
     }
     
     return self;
@@ -23,8 +30,34 @@
     
     [super applyConfiguration:configuration];
     
-    // TODO load a bit of flavor stuff about what's happened with Fibonacci so far
-    // Ideas include how many computations have been done and displayed and what the highest number calculated is
+    Class<CodeSampleStatusTracking> targetClass = NSClassFromString(configuration[kTableViewTargetViewControllerClassNameKey]);
+    
+    self.detailTextLabel.text = [targetClass formattedStatus];
+    self.detailTextLabel.font = [UIFont italicSystemFontOfSize:8.0f];
+    self.detailTextLabel.textColor = [UIColor blueColor];
+}
+
+- (BOOL) prepareForAnimation {
+    
+    if (!CGPointEqualToPoint(self.detailTextLabel.center, self.detailTextLabelOriginalCenter)) {
+        self.detailTextLabel.alpha = 0.0f;
+        self.detailTextLabelOriginalCenter = self.detailTextLabel.center;
+        self.detailTextLabel.center = CGPointMake(self.detailTextLabel.center.x + 25, self.detailTextLabel.center.y);
+        return YES;
+    } else {
+        return NO;
+    }}
+
+- (void) animateIn {
+    
+    [UIView animateWithDuration:kLandingViewCellTotalAnimationTime
+                          delay:0.25f
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         self.detailTextLabel.alpha = 1.0f;
+                         self.detailTextLabel.center = self.detailTextLabelOriginalCenter;
+                     }
+                     completion:NULL];
 }
 
 @end

@@ -27,6 +27,11 @@
 		E172024F18DD364000D4241D /* LandingViewConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E172024E18DD364000D4241D /* LandingViewConfiguration.m */; };
 		E172025218DD375400D4241D /* UnusableLandingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E172025118DD375400D4241D /* UnusableLandingViewCell.m */; };
 		E172025B18DE86A800D4241D /* FibonacciTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E172025A18DE86A800D4241D /* FibonacciTableViewController.m */; };
+		E172026218DF669C00D4241D /* About_Fibonacci.txt in Resources */ = {isa = PBXBuildFile; fileRef = E172026118DF669C00D4241D /* About_Fibonacci.txt */; };
+		E172026518DF705A00D4241D /* CodeSampleAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E172026418DF705A00D4241D /* CodeSampleAlertView.m */; };
+		E172026B18DF7FA500D4241D /* FibonacciTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E172026A18DF7FA500D4241D /* FibonacciTableViewDataSource.m */; };
+		E172026E18DF82BB00D4241D /* FibonacciCalculationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E172026D18DF82BB00D4241D /* FibonacciCalculationOperation.m */; };
+		E172027118DF8A8D00D4241D /* FibonacciResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E172027018DF8A8D00D4241D /* FibonacciResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,16 @@
 		E172025118DD375400D4241D /* UnusableLandingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnusableLandingViewCell.m; path = "Core/Landing View/UnusableLandingViewCell.m"; sourceTree = "<group>"; };
 		E172025918DE86A800D4241D /* FibonacciTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciTableViewController.h; path = Fibonacci/FibonacciTableViewController.h; sourceTree = "<group>"; };
 		E172025A18DE86A800D4241D /* FibonacciTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FibonacciTableViewController.m; path = Fibonacci/FibonacciTableViewController.m; sourceTree = "<group>"; };
+		E172026018DF088E00D4241D /* CodeSampleStatusTracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CodeSampleStatusTracking.h; path = Core/Interfaces/CodeSampleStatusTracking.h; sourceTree = "<group>"; };
+		E172026118DF669C00D4241D /* About_Fibonacci.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = About_Fibonacci.txt; path = Fibonacci/About_Fibonacci.txt; sourceTree = "<group>"; };
+		E172026318DF705A00D4241D /* CodeSampleAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeSampleAlertView.h; path = Categories/CodeSampleAlertView.h; sourceTree = "<group>"; };
+		E172026418DF705A00D4241D /* CodeSampleAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CodeSampleAlertView.m; path = Categories/CodeSampleAlertView.m; sourceTree = "<group>"; };
+		E172026918DF7FA500D4241D /* FibonacciTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciTableViewDataSource.h; path = Fibonacci/FibonacciTableViewDataSource.h; sourceTree = "<group>"; };
+		E172026A18DF7FA500D4241D /* FibonacciTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FibonacciTableViewDataSource.m; path = Fibonacci/FibonacciTableViewDataSource.m; sourceTree = "<group>"; };
+		E172026C18DF82BB00D4241D /* FibonacciCalculationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciCalculationOperation.h; path = Fibonacci/FibonacciCalculationOperation.h; sourceTree = "<group>"; };
+		E172026D18DF82BB00D4241D /* FibonacciCalculationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FibonacciCalculationOperation.m; path = Fibonacci/FibonacciCalculationOperation.m; sourceTree = "<group>"; };
+		E172026F18DF8A8D00D4241D /* FibonacciResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciResult.h; path = Fibonacci/FibonacciResult.h; sourceTree = "<group>"; };
+		E172027018DF8A8D00D4241D /* FibonacciResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FibonacciResult.m; path = Fibonacci/FibonacciResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +161,7 @@
 				E172020B18DD0A9200D4241D /* InfoPlist.strings */,
 				E172020E18DD0A9200D4241D /* main.m */,
 				E172021018DD0A9200D4241D /* CodeSample-Prefix.pch */,
+				E172026118DF669C00D4241D /* About_Fibonacci.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,6 +187,7 @@
 		E172023118DD11BE00D4241D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E172025F18DF084F00D4241D /* Interfaces */,
 				E172024818DD326900D4241D /* Supers */,
 				E172024018DD24EF00D4241D /* Fibonacci */,
 				E172023618DD13CA00D4241D /* Landing View */,
@@ -183,6 +200,8 @@
 		E172023218DD11CD00D4241D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				E172026318DF705A00D4241D /* CodeSampleAlertView.h */,
+				E172026418DF705A00D4241D /* CodeSampleAlertView.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -217,6 +236,12 @@
 				E172024218DD251100D4241D /* FibonacciLandingViewTableViewCell.m */,
 				E172025918DE86A800D4241D /* FibonacciTableViewController.h */,
 				E172025A18DE86A800D4241D /* FibonacciTableViewController.m */,
+				E172026918DF7FA500D4241D /* FibonacciTableViewDataSource.h */,
+				E172026A18DF7FA500D4241D /* FibonacciTableViewDataSource.m */,
+				E172026C18DF82BB00D4241D /* FibonacciCalculationOperation.h */,
+				E172026D18DF82BB00D4241D /* FibonacciCalculationOperation.m */,
+				E172026F18DF8A8D00D4241D /* FibonacciResult.h */,
+				E172027018DF8A8D00D4241D /* FibonacciResult.m */,
 			);
 			name = Fibonacci;
 			sourceTree = "<group>";
@@ -228,6 +253,14 @@
 				E172024A18DD329200D4241D /* LandingViewCell.m */,
 			);
 			name = Supers;
+			sourceTree = "<group>";
+		};
+		E172025F18DF084F00D4241D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				E172026018DF088E00D4241D /* CodeSampleStatusTracking.h */,
+			);
+			name = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E172020D18DD0A9200D4241D /* InfoPlist.strings in Resources */,
+				E172026218DF669C00D4241D /* About_Fibonacci.txt in Resources */,
 				E172021518DD0A9200D4241D /* Images.xcassets in Resources */,
 				E172023518DD134600D4241D /* com.karpodinis.resources.LandingViewDataSource.plist in Resources */,
 			);
@@ -326,12 +360,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E172026518DF705A00D4241D /* CodeSampleAlertView.m in Sources */,
 				E172025B18DE86A800D4241D /* FibonacciTableViewController.m in Sources */,
 				E172024F18DD364000D4241D /* LandingViewConfiguration.m in Sources */,
+				E172027118DF8A8D00D4241D /* FibonacciResult.m in Sources */,
 				E172024B18DD329200D4241D /* LandingViewCell.m in Sources */,
+				E172026B18DF7FA500D4241D /* FibonacciTableViewDataSource.m in Sources */,
 				E172024318DD251100D4241D /* FibonacciLandingViewTableViewCell.m in Sources */,
 				E172025218DD375400D4241D /* UnusableLandingViewCell.m in Sources */,
 				E172021318DD0A9200D4241D /* AppDelegate.m in Sources */,
+				E172026E18DF82BB00D4241D /* FibonacciCalculationOperation.m in Sources */,
 				E172023918DD140100D4241D /* LandingViewTableViewController.m in Sources */,
 				E172020F18DD0A9200D4241D /* main.m in Sources */,
 				E172023C18DD155300D4241D /* LandingViewTableViewControllerDataSource.m in Sources */,
