@@ -32,6 +32,12 @@
 		E172026B18DF7FA500D4241D /* FibonacciTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E172026A18DF7FA500D4241D /* FibonacciTableViewDataSource.m */; };
 		E172026E18DF82BB00D4241D /* FibonacciCalculationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E172026D18DF82BB00D4241D /* FibonacciCalculationOperation.m */; };
 		E172027118DF8A8D00D4241D /* FibonacciResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E172027018DF8A8D00D4241D /* FibonacciResult.m */; };
+		E172027518DFC1B400D4241D /* BloomLandingViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E172027418DFC1B400D4241D /* BloomLandingViewTableViewCell.m */; };
+		E172027818DFC27000D4241D /* BloomSourceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E172027718DFC27000D4241D /* BloomSourceTableViewController.m */; };
+		E172027B18DFC31300D4241D /* BloomSourceDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E172027A18DFC31300D4241D /* BloomSourceDataSource.m */; };
+		E172027D18DFC39300D4241D /* com.karpodinis.resources.BloomSources.plist in Resources */ = {isa = PBXBuildFile; fileRef = E172027C18DFC39300D4241D /* com.karpodinis.resources.BloomSources.plist */; };
+		E172028018DFC75300D4241D /* BloomSourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E172027F18DFC75200D4241D /* BloomSourceCell.m */; };
+		E172028218E056B700D4241D /* About_Bloom.txt in Resources */ = {isa = PBXBuildFile; fileRef = E172028118E056B700D4241D /* About_Bloom.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +92,16 @@
 		E172026D18DF82BB00D4241D /* FibonacciCalculationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FibonacciCalculationOperation.m; path = Fibonacci/FibonacciCalculationOperation.m; sourceTree = "<group>"; };
 		E172026F18DF8A8D00D4241D /* FibonacciResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciResult.h; path = Fibonacci/FibonacciResult.h; sourceTree = "<group>"; };
 		E172027018DF8A8D00D4241D /* FibonacciResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FibonacciResult.m; path = Fibonacci/FibonacciResult.m; sourceTree = "<group>"; };
+		E172027318DFC1B400D4241D /* BloomLandingViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BloomLandingViewTableViewCell.h; path = Bloom/BloomLandingViewTableViewCell.h; sourceTree = "<group>"; };
+		E172027418DFC1B400D4241D /* BloomLandingViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BloomLandingViewTableViewCell.m; path = Bloom/BloomLandingViewTableViewCell.m; sourceTree = "<group>"; };
+		E172027618DFC27000D4241D /* BloomSourceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BloomSourceTableViewController.h; path = Bloom/BloomSourceTableViewController.h; sourceTree = "<group>"; };
+		E172027718DFC27000D4241D /* BloomSourceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BloomSourceTableViewController.m; path = Bloom/BloomSourceTableViewController.m; sourceTree = "<group>"; };
+		E172027918DFC31300D4241D /* BloomSourceDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BloomSourceDataSource.h; path = Bloom/BloomSourceDataSource.h; sourceTree = "<group>"; };
+		E172027A18DFC31300D4241D /* BloomSourceDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BloomSourceDataSource.m; path = Bloom/BloomSourceDataSource.m; sourceTree = "<group>"; };
+		E172027C18DFC39300D4241D /* com.karpodinis.resources.BloomSources.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = com.karpodinis.resources.BloomSources.plist; path = Support/com.karpodinis.resources.BloomSources.plist; sourceTree = "<group>"; };
+		E172027E18DFC75200D4241D /* BloomSourceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BloomSourceCell.h; path = Bloom/BloomSourceCell.h; sourceTree = "<group>"; };
+		E172027F18DFC75200D4241D /* BloomSourceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BloomSourceCell.m; path = Bloom/BloomSourceCell.m; sourceTree = "<group>"; };
+		E172028118E056B700D4241D /* About_Bloom.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = About_Bloom.txt; path = Bloom/About_Bloom.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				E172023318DD126D00D4241D /* Support */,
-				E172023218DD11CD00D4241D /* Categories */,
+				E172023218DD11CD00D4241D /* Extensions */,
 				E172023118DD11BE00D4241D /* Core */,
 				E172020918DD0A9200D4241D /* Supporting Files */,
 			);
@@ -162,6 +178,7 @@
 				E172020E18DD0A9200D4241D /* main.m */,
 				E172021018DD0A9200D4241D /* CodeSample-Prefix.pch */,
 				E172026118DF669C00D4241D /* About_Fibonacci.txt */,
+				E172028118E056B700D4241D /* About_Bloom.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,6 +204,7 @@
 		E172023118DD11BE00D4241D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E172027218DFC15700D4241D /* Bloom */,
 				E172025F18DF084F00D4241D /* Interfaces */,
 				E172024818DD326900D4241D /* Supers */,
 				E172024018DD24EF00D4241D /* Fibonacci */,
@@ -197,19 +215,20 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		E172023218DD11CD00D4241D /* Categories */ = {
+		E172023218DD11CD00D4241D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				E172026318DF705A00D4241D /* CodeSampleAlertView.h */,
 				E172026418DF705A00D4241D /* CodeSampleAlertView.m */,
 			);
-			name = Categories;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		E172023318DD126D00D4241D /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				E172023418DD134600D4241D /* com.karpodinis.resources.LandingViewDataSource.plist */,
+				E172027C18DFC39300D4241D /* com.karpodinis.resources.BloomSources.plist */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -261,6 +280,21 @@
 				E172026018DF088E00D4241D /* CodeSampleStatusTracking.h */,
 			);
 			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		E172027218DFC15700D4241D /* Bloom */ = {
+			isa = PBXGroup;
+			children = (
+				E172027318DFC1B400D4241D /* BloomLandingViewTableViewCell.h */,
+				E172027418DFC1B400D4241D /* BloomLandingViewTableViewCell.m */,
+				E172027618DFC27000D4241D /* BloomSourceTableViewController.h */,
+				E172027718DFC27000D4241D /* BloomSourceTableViewController.m */,
+				E172027918DFC31300D4241D /* BloomSourceDataSource.h */,
+				E172027A18DFC31300D4241D /* BloomSourceDataSource.m */,
+				E172027E18DFC75200D4241D /* BloomSourceCell.h */,
+				E172027F18DFC75200D4241D /* BloomSourceCell.m */,
+			);
+			name = Bloom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +375,8 @@
 				E172020D18DD0A9200D4241D /* InfoPlist.strings in Resources */,
 				E172026218DF669C00D4241D /* About_Fibonacci.txt in Resources */,
 				E172021518DD0A9200D4241D /* Images.xcassets in Resources */,
+				E172027D18DFC39300D4241D /* com.karpodinis.resources.BloomSources.plist in Resources */,
+				E172028218E056B700D4241D /* About_Bloom.txt in Resources */,
 				E172023518DD134600D4241D /* com.karpodinis.resources.LandingViewDataSource.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,13 +396,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E172028018DFC75300D4241D /* BloomSourceCell.m in Sources */,
 				E172026518DF705A00D4241D /* CodeSampleAlertView.m in Sources */,
 				E172025B18DE86A800D4241D /* FibonacciTableViewController.m in Sources */,
+				E172027518DFC1B400D4241D /* BloomLandingViewTableViewCell.m in Sources */,
 				E172024F18DD364000D4241D /* LandingViewConfiguration.m in Sources */,
 				E172027118DF8A8D00D4241D /* FibonacciResult.m in Sources */,
 				E172024B18DD329200D4241D /* LandingViewCell.m in Sources */,
 				E172026B18DF7FA500D4241D /* FibonacciTableViewDataSource.m in Sources */,
+				E172027B18DFC31300D4241D /* BloomSourceDataSource.m in Sources */,
 				E172024318DD251100D4241D /* FibonacciLandingViewTableViewCell.m in Sources */,
+				E172027818DFC27000D4241D /* BloomSourceTableViewController.m in Sources */,
 				E172025218DD375400D4241D /* UnusableLandingViewCell.m in Sources */,
 				E172021318DD0A9200D4241D /* AppDelegate.m in Sources */,
 				E172026E18DF82BB00D4241D /* FibonacciCalculationOperation.m in Sources */,

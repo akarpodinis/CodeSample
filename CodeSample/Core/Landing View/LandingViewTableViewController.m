@@ -12,7 +12,7 @@
 
 @interface LandingViewTableViewController () <UITableViewDelegate>
 
-@property (nonatomic, retain) LandingViewTableViewControllerDataSource *landingViewDataSource;
+@property (nonatomic, strong) LandingViewTableViewControllerDataSource *landingViewDataSource;
 
 @end
 

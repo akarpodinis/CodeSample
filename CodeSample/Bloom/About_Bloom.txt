@@ -1,0 +1,7 @@
+Select a source dictionary to get started.  If the dictionary hasn't been previously downloaded, it will be downloaded and hashed into a filter for you.  You can also add and edit the source list as you like.  An example source dictionary has been provided for you.  If you wish to add your own dictionary, words should be separated by a newline for proper handling.
+
+Bloom filters are a statistical approach to testing membership in a set of data, where the set may be too large to put into memory or searching the set directly may be too costly.  The members of the set are processed one at a time by hashing and taking a short range of the resulting hash as a representation of the set member.  Membership is tested by hashing the search term and comparing the hash against the bit array.
+
+This convenience comes at a cost, though, by virtue of summarizing the contents of the set using a hash: sometimes the filter will report a false positive (though never a false negative).
+
+This implementation is tweaked to use a bit array of 10,000 and will hash the incoming data three ways, as a nice statistical medium.

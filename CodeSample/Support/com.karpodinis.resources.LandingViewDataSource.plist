@@ -10,5 +10,13 @@
 		<key>TableViewTargetViewControllerClassNameKey</key>
 		<string>FibonacciTableViewController</string>
 	</dict>
+	<dict>
+		<key>TableViewCellClassNameKey</key>
+		<string>BloomLandingViewTableViewCell</string>
+		<key>TableViewCellTextNameKey</key>
+		<string>Bloom filter</string>
+		<key>TableViewTargetViewControllerClassNameKey</key>
+		<string>BloomSourceTableViewController</string>
+	</dict>
 </array>
 </plist>
