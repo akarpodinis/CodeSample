@@ -61,7 +61,7 @@ NSString *const kFibonacciResultCellReuseIdentifier = @"kFibonacciResultCellReus
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.currentlyCalculatingIndex + 1;
+    return [self.results count] + 1;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -93,7 +93,7 @@ NSString *const kFibonacciResultCellReuseIdentifier = @"kFibonacciResultCellReus
     
     [self.results addObject:result];
     
-    self.currentlyCalculatingIndex += 1;
+    self.currentlyCalculatingIndex = [result.index intValue] + 1;
     
     [self.delegate dataSource:self didUpdateDatasetWithResult:result atIndexPath:[NSIndexPath indexPathForRow:[result.index intValue] inSection:0]];
 }
