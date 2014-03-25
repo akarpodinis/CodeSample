@@ -17,4 +17,3 @@
 
 #import "LandingViewConfiguration.h"
 #import "CodeSampleAlertView.h"
-#import "NSString+CodeSample.h"

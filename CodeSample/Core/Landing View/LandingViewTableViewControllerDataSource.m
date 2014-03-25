@@ -32,17 +32,7 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
         
         NSCAssert(listURL != nil, @"%@.%@ missing, there's nothing to load", kLandingViewControllerFileName, kLandingViewControllerFileExtension);
         
-        NSArray *rawList = [NSArray arrayWithContentsOfURL:listURL];
-        
-        NSMutableArray *finalList = [[NSMutableArray alloc] initWithCapacity:[rawList count]];
-        
-        for (NSDictionary *configuration in rawList) {
-            if ([configuration[kActiveKey] boolValue]) {
-                [finalList addObject:configuration];
-            }
-        }
-        
-        _configurationList = [finalList copy];
+        _configurationList = [NSArray arrayWithContentsOfURL:listURL];
     }
     
     return self;

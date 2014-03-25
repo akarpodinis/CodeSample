@@ -3,24 +3,12 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>Active</key>
-		<true/>
 		<key>TableViewCellClassNameKey</key>
 		<string>FibonacciLandingViewTableViewCell</string>
 		<key>TableViewCellTextNameKey</key>
 		<string>Fibonacci listing</string>
 		<key>TableViewTargetViewControllerClassNameKey</key>
 		<string>FibonacciTableViewController</string>
-	</dict>
-	<dict>
-		<key>Active</key>
-		<false/>
-		<key>TableViewCellClassNameKey</key>
-		<string>BloomLandingViewTableViewCell</string>
-		<key>TableViewCellTextNameKey</key>
-		<string>Bloom filter</string>
-		<key>TableViewTargetViewControllerClassNameKey</key>
-		<string>BloomSourceTableViewController</string>
 	</dict>
 </array>
 </plist>

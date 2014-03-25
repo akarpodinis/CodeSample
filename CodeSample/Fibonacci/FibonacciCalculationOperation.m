@@ -26,6 +26,14 @@
     }
     
     for (NSInteger i = 0; i < INT_MAX; i++) {
+        if (!self.delegate) {
+            [self cancel];
+        }
+        
+        if ([self isCancelled]) {
+            break;
+        }
+        
         NSDate *startTime = [NSDate date];
         
         NSInteger calculatedNumber = [self fibonacci:i];

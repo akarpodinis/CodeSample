@@ -69,15 +69,12 @@ NSString *const kFibonacciAoubtFileExtension = @"txt";
     
     FibonacciResult *result = [self.fibonacciDataSource stopCalculation];
     
-    NSData *storedData = [[NSUserDefaults standardUserDefaults] objectForKey:kFibonacciTableViewControllerLastResultKey];
+    FibonacciResult *previousResult = [NSKeyedUnarchiver unarchiveObjectWithData:
+                                       [[NSUserDefaults standardUserDefaults] objectForKey:kFibonacciTableViewControllerLastResultKey]];
     
-    if (storedData) {
-        FibonacciResult *previousResult = [NSKeyedUnarchiver unarchiveObjectWithData:storedData];
-        
-        if (!previousResult || [result compare:previousResult] == NSOrderedDescending) {
-            [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:result] forKey:kFibonacciTableViewControllerLastResultKey];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
+    if (!previousResult || [result compare:previousResult] == NSOrderedDescending) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:result] forKey:kFibonacciTableViewControllerLastResultKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
     self.fibonacciDataSource = nil;
@@ -88,13 +85,8 @@ NSString *const kFibonacciAoubtFileExtension = @"txt";
 
 + (NSString *) formattedStatus {
     
-    NSData *storedData = [[NSUserDefaults standardUserDefaults] objectForKey:kFibonacciTableViewControllerLastResultKey];
-    
-    if (!storedData) {
-        return nil;
-    }
-    
-    FibonacciResult *result = [NSKeyedUnarchiver unarchiveObjectWithData:storedData];
+    FibonacciResult *result = [NSKeyedUnarchiver unarchiveObjectWithData:
+                               [[NSUserDefaults standardUserDefaults] objectForKey:kFibonacciTableViewControllerLastResultKey]];
     
     return [result description];
 }
