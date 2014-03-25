@@ -8,6 +8,7 @@ This code sample is designed to showcase my ability to handle concurrent operati
 The meat of the project is broken into two parts:
 
 1) The landing view
+
 2) The Fibonacci table view and calculation
 
 The landing view is worth noting because I took the time to create a framework that will allow me to extend the number of problems solved in the future simply by editing a configuration file (com.karpodinis.resources.LandingViewDataSource.plist).  I generalized the data handling and validation for my future self to aid in the rapid addition of problems and their solutions over time so I could focus on creating solutions to new problems instead of revisiting old ones.  Chief among those 'old ones' is managing a table view full of data.
