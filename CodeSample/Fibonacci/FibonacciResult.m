@@ -65,7 +65,7 @@ NSString *const kFibonacciResultNumberKey = @"kFibonacciResultNumberKey";
 
 - (NSString *) description {
     
-    return [NSString stringWithFormat:@"F(%d) = %d (%f sec)", [_index integerValue], [_number integerValue], _calculationTime];
+    return [NSString stringWithFormat:@"F(%ld) = %ld (%f sec)", (long)[_index integerValue], (long)[_number integerValue], _calculationTime];
 }
 
 @end
