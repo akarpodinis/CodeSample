@@ -18,8 +18,8 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
 @property (nonatomic, strong) NSArray *configurationList;
 @property (nonatomic, readwrite, strong) NSArray *registerableTableViewCellClassNames;
 
-- (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties;
-- (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass;
++ (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties;
++ (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass;
 
 @end
 
@@ -58,7 +58,7 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
     
     LandingViewCell *cell = nil;
     
-    if ([self analyzeCellPropertiesForCorrectness:cellProperties]) { // Properties are valid, configure them to be usable
+    if ([LandingViewTableViewControllerDataSource analyzeCellPropertiesForCorrectness:cellProperties]) { // Properties are valid, configure them to be usable
         cell = [tableView dequeueReusableCellWithIdentifier:cellProperties[kTableViewCellClassNameKey] forIndexPath:indexPath];
     } else  {   // Properties are NOT valid, configure the cell to be unusable
         cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellUnusableCellClassName forIndexPath:indexPath];
@@ -106,7 +106,7 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
 
 #pragma mark - Helper methods
 
-- (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties {
++ (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties {
     
     BOOL isTargetClassValid = [LandingViewTableViewControllerDataSource testClassNameForExistense:properties[kTableViewTargetViewControllerClassNameKey]
                                                                                    kindOfSubclass:[UIViewController class]];

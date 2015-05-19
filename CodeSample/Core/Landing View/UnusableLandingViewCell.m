@@ -61,7 +61,7 @@
                          self.detailTextLabel.alpha = 1.0f;
                          self.detailTextLabel.center = self.detailTextLabelOriginalCenter;
                      }
-                     completion:NULL];
+                     completion:nil];
 }
 
 @end
