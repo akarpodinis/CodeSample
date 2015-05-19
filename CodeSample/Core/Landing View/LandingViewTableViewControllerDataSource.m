@@ -18,8 +18,8 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
 @property (nonatomic, strong) NSArray *configurationList;
 @property (nonatomic, readwrite, strong) NSArray *registerableTableViewCellClassNames;
 
-- (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties;
-- (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass;
++ (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties;
++ (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass;
 
 @end
 
@@ -30,7 +30,7 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
     if ( self = [super init] ) {
         NSURL *listURL = [[NSBundle mainBundle] URLForResource:kLandingViewControllerFileName withExtension:kLandingViewControllerFileExtension];
         
-        NSCAssert(listURL != nil, @"%@.%@ missing, there's nothing to load", kLandingViewControllerFileName, kLandingViewControllerFileExtension);
+        NSAssert(listURL != nil, @"%@.%@ missing, there's nothing to load", kLandingViewControllerFileName, kLandingViewControllerFileExtension);
         
         _configurationList = [NSArray arrayWithContentsOfURL:listURL];
     }
@@ -58,7 +58,7 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
     
     LandingViewCell *cell = nil;
     
-    if ([self analyzeCellPropertiesForCorrectness:cellProperties]) { // Properties are valid, configure them to be usable
+    if ([LandingViewTableViewControllerDataSource analyzeCellPropertiesForCorrectness:cellProperties]) { // Properties are valid, configure them to be usable
         cell = [tableView dequeueReusableCellWithIdentifier:cellProperties[kTableViewCellClassNameKey] forIndexPath:indexPath];
     } else  {   // Properties are NOT valid, configure the cell to be unusable
         cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellUnusableCellClassName forIndexPath:indexPath];
@@ -106,20 +106,20 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
 
 #pragma mark - Helper methods
 
-- (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties {
++ (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties {
     
-    BOOL isTargetClassValid = [self testClassNameForExistense:properties[kTableViewTargetViewControllerClassNameKey]
-                                               kindOfSubclass:[UIViewController class]];
+    BOOL isTargetClassValid = [LandingViewTableViewControllerDataSource testClassNameForExistense:properties[kTableViewTargetViewControllerClassNameKey]
+                                                                                   kindOfSubclass:[UIViewController class]];
     
-    BOOL isLoadableLandingCellClassValid = [self testClassNameForExistense:properties[kTableViewCellClassNameKey]
-                                                            kindOfSubclass:[UITableViewCell class]];
+    BOOL isLoadableLandingCellClassValid = [LandingViewTableViewControllerDataSource testClassNameForExistense:properties[kTableViewCellClassNameKey]
+                                                                                                kindOfSubclass:[UITableViewCell class]];
     
     BOOL hasCellText = properties[kTableViewCellTextNameKey] != nil;
     
     return isTargetClassValid && isLoadableLandingCellClassValid && hasCellText;
 }
 
-- (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass {
++ (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass {
     
     Class loadableClass = NSClassFromString(className);
     
