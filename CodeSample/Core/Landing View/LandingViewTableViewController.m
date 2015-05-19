@@ -44,12 +44,11 @@
     
     Class classToLoad = [self.landingViewDataSource classToLoadFromIndexPath:indexPath];
     
+    NSAssert([classToLoad isSubclassOfClass:[UIViewController class]], @"Classes to be loaded from the Landing View must be subclasses of UIViewController.");
+    
     UIViewController *viewController = (UIViewController *) [[classToLoad alloc] init];
     
-    if (!viewController) {
-        NSLog(@"Can't load a nil view controller, doing nothing.");
-        return;
-    }
+    NSAssert(classToLoad != nil, @"Can't present a nil view controller, initialization failed (%@).", [classToLoad class]);
     
     [self.navigationController pushViewController:viewController animated:YES];
 }

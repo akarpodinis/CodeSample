@@ -25,6 +25,7 @@ NSString *const kFibonacciResultNumberKey = @"kFibonacciResultNumberKey";
     
     return self;
 }
+
 - (NSComparisonResult) compare:(FibonacciResult *)other {
     
     NSComparisonResult indexComparisonResult = [self.index compare:other.index];

@@ -30,7 +30,7 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
     if ( self = [super init] ) {
         NSURL *listURL = [[NSBundle mainBundle] URLForResource:kLandingViewControllerFileName withExtension:kLandingViewControllerFileExtension];
         
-        NSCAssert(listURL != nil, @"%@.%@ missing, there's nothing to load", kLandingViewControllerFileName, kLandingViewControllerFileExtension);
+        NSAssert(listURL != nil, @"%@.%@ missing, there's nothing to load", kLandingViewControllerFileName, kLandingViewControllerFileExtension);
         
         _configurationList = [NSArray arrayWithContentsOfURL:listURL];
     }
@@ -108,18 +108,18 @@ NSString *const kLandingViewControllerFileExtension= @"plist";
 
 - (BOOL) analyzeCellPropertiesForCorrectness:(NSDictionary *)properties {
     
-    BOOL isTargetClassValid = [self testClassNameForExistense:properties[kTableViewTargetViewControllerClassNameKey]
-                                               kindOfSubclass:[UIViewController class]];
+    BOOL isTargetClassValid = [LandingViewTableViewControllerDataSource testClassNameForExistense:properties[kTableViewTargetViewControllerClassNameKey]
+                                                                                   kindOfSubclass:[UIViewController class]];
     
-    BOOL isLoadableLandingCellClassValid = [self testClassNameForExistense:properties[kTableViewCellClassNameKey]
-                                                            kindOfSubclass:[UITableViewCell class]];
+    BOOL isLoadableLandingCellClassValid = [LandingViewTableViewControllerDataSource testClassNameForExistense:properties[kTableViewCellClassNameKey]
+                                                                                                kindOfSubclass:[UITableViewCell class]];
     
     BOOL hasCellText = properties[kTableViewCellTextNameKey] != nil;
     
     return isTargetClassValid && isLoadableLandingCellClassValid && hasCellText;
 }
 
-- (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass {
++ (BOOL) testClassNameForExistense:(NSString *)className kindOfSubclass:(Class)subclass {
     
     Class loadableClass = NSClassFromString(className);
     
